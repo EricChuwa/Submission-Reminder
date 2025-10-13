@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Source environment variables and helper functions
-source submission_reminder_Nonie/config/config.env
-source submission_reminder_Nonie/modules/functions.sh
+source submission_reminder_Eric/config/config.env
+source submission_reminder_Eric/modules/functions.sh
 
 # Path to the submissions file
-submissions_file="submission_reminder_Nonie/assets/submissions.txt"
+submissions_file="submission_reminder_Eric/assets/submissions.txt"
 
 # Print remaining time and run the reminder function
 echo "Assignment: $ASSIGNMENT"

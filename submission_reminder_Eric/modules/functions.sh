@@ -6,11 +6,11 @@ function check_submissions {
     echo "Checking submissions in \submissions_file"
 
     # Skip the header and iterate through the lines
-    while IFS= read -r student assignment status; do
+    while IFS=, read -r student assignment status; do
         # Remove leading and trailing whitespace
-        student=$student
-        assignment=$assignment
-        status=$status
+        student=$(echo "$student" | xargs)
+        assignment=$(echo "$assignment" | xargs)
+        status=$(echo "$status" | xargs)
 
         # Check if assignment matches and status is 'not submitted'
         if [[ "$assignment" == "$ASSIGNMENT" && "$status" == "not submitted" ]]; then
