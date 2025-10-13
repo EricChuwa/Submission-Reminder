@@ -4,6 +4,7 @@ read -p "Enter first Name: "  usrName #Reading User name and saving into the usr
 export usrHome="submission_reminder_$usrName"
 
 mkdir -p $usrHome/{app,modules,assets,config} #creating the directory
+echo "Directory $usrHome has been created!"
 
 # File creation
 touch $usrHome/app/reminder.sh
@@ -44,9 +45,9 @@ function check_submissions {
     # Skip the header and iterate through the lines
     while IFS=, read -r student assignment status; do
         # Remove leading and trailing whitespace
-        student=$(echo "\$student" | xargs)
-        assignment=$(echo "\$assignment" | xargs)
-        status=$(echo "\$status" | xargs)
+        student=\$(echo "\$student" | xargs)
+        assignment=\$(echo "\$assignment" | xargs)
+        status=\$(echo "\$status" | xargs)
 
         # Check if assignment matches and status is 'not submitted'
         if [[ "\$assignment" == "\$ASSIGNMENT" && "\$status" == "not submitted" ]]; then
@@ -75,6 +76,8 @@ Edwin, Shell Loops, not submitted
 Nonie, Shell Basics, submitted
 Samantha, Git, not submitted
 Jeremiah, Shell Navigation, not submitted
+Hannah, Shell Basics, not submitted
+Matthew, Shell Initialization, not submitted
 EOF
 
 # Writing startup.sh
