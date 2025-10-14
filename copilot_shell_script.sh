@@ -20,8 +20,8 @@ case $numChoice in
     3) ASSIGNMENT="Shell Basics";;
     4) ASSIGNMENT="Shell Initialization";;
     5) ASSIGNMENT="Shell Loops";;
-    6) exit 0;;
-   *) echo "INVALID CHOICE"; exit 1;;
+    6) exit 1;;
+    *) echo "INVALID CHOICE"; exit 0;;
 esac
 
 
