@@ -26,11 +26,13 @@ source $usrHome/modules/functions.sh
 submissions_file="$usrHome/assets/submissions.txt"
 
 # Print remaining time and run the reminder function
+echo ""
 echo "Assignment: \$ASSIGNMENT"
 echo "Days remaining to submit: \$DAYS_REMAINING days"
 echo "--------------------------------------------"
 
 check_submissions \$submissions_file
+echo ""
 EOF
 
 # Writing functions.sh
@@ -83,7 +85,7 @@ EOF
 # Writing startup.sh
 chmod u+x $usrHome/startup.sh
 cat <<EOF > "$usrHome/startup.sh"
-chmod u+x $usrHome/app/reminder.sh
+#!/bin/bash
 ./$usrHome/app/reminder.sh
 EOF
 

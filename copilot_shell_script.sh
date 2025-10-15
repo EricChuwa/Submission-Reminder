@@ -21,9 +21,10 @@ case $numChoice in
     4) ASSIGNMENT="Shell Initialization";;
     5) ASSIGNMENT="Shell Loops";;
     6) exit 1;;
-    *) echo "INVALID CHOICE"; exit 0;;
+   *) echo "INVALID CHOICE"; exit 0;;
 esac
 
 
 sed -i "s|ASSIGNMENT=\".*\"|ASSIGNMENT=\"$ASSIGNMENT\"|" "$usrHome/config/config.env"
 
+./submission_*/startup.sh
