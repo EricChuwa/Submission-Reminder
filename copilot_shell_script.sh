@@ -3,6 +3,7 @@
 # saving submission fileSystem
 usrHome=$(find . -name "submission_reminder_*" | awk -F"/" '{ print $2 }')
 
+echo "********************************************"
 # Assignment Menu
 echo -e """Assignments:
 1) Shell Navigation
@@ -21,17 +22,10 @@ case $numChoice in
     4) ASSIGNMENT="Shell Initialization";;
     5) ASSIGNMENT="Shell Loops";;
     6) exit 1;;
-<<<<<<< HEAD
-   *) echo "INVALID CHOICE"; exit 0;;
-=======
     *) echo "INVALID CHOICE"; exit 0;;
->>>>>>> workspace
 esac
-
+echo "********************************************"
 
 sed -i "s|ASSIGNMENT=\".*\"|ASSIGNMENT=\"$ASSIGNMENT\"|" "$usrHome/config/config.env"
 
-<<<<<<< HEAD
 ./submission_*/startup.sh
-=======
->>>>>>> workspace
