@@ -26,13 +26,19 @@ source $usrHome/modules/functions.sh
 submissions_file="$usrHome/assets/submissions.txt"
 
 # Print remaining time and run the reminder function
+<<<<<<< HEAD
 echo ""
+=======
+>>>>>>> workspace
 echo "Assignment: \$ASSIGNMENT"
 echo "Days remaining to submit: \$DAYS_REMAINING days"
 echo "--------------------------------------------"
 
 check_submissions \$submissions_file
+<<<<<<< HEAD
 echo ""
+=======
+>>>>>>> workspace
 EOF
 
 # Writing functions.sh
@@ -85,9 +91,17 @@ EOF
 # Writing startup.sh
 chmod u+x $usrHome/startup.sh
 cat <<EOF > "$usrHome/startup.sh"
+<<<<<<< HEAD
 #!/bin/bash
+=======
+chmod u+x $usrHome/app/reminder.sh
+>>>>>>> workspace
 ./$usrHome/app/reminder.sh
 EOF
 
 # Updating permisions of all files with .sh extension
+<<<<<<< HEAD
 find $usrHome -name "*.sh" -exec chmod u+x {} \;
+=======
+find $usrHome -name "*.sh" -exec chmod u+x {} \;
+>>>>>>> workspace
