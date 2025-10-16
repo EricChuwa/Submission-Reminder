@@ -10,6 +10,7 @@ The application helps automate:
 
 ## Project Structure
 
+```
 Submission-Reminder/
 ├── copilot_shell_script.sh
 ├── create_environment.sh
@@ -24,7 +25,7 @@ Submission-Reminder/
     ├── modules/
     │   └── functions.sh
     └── startup.sh
-
+```
 
 Description of key files:
 
