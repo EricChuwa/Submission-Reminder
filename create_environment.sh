@@ -19,18 +19,20 @@ cat <<EOF > "$usrHome/app/reminder.sh"
 #!/bin/bash
 
 # Source environment variables and helper functions
-source $usrHome/config/config.env
-source $usrHome/modules/functions.sh
+source ../config/config.env
+source ../modules/functions.sh
 
 # Path to the submissions file
-submissions_file="$usrHome/assets/submissions.txt"
+submissions_file="../assets/submissions.txt"
 
 # Print remaining time and run the reminder function
+echo " "
 echo "Assignment: \$ASSIGNMENT"
 echo "Days remaining to submit: \$DAYS_REMAINING days"
 echo "--------------------------------------------"
 
 check_submissions \$submissions_file
+echo "--------------------------------------------"
 EOF
 
 # Writing functions.sh
@@ -83,8 +85,9 @@ EOF
 # Writing startup.sh
 chmod u+x $usrHome/startup.sh
 cat <<EOF > "$usrHome/startup.sh"
-chmod u+x $usrHome/app/reminder.sh
-./$usrHome/app/reminder.sh
+cd app
+./reminder.sh
+cd ..
 EOF
 
 # Updating permisions of all files with .sh extension
