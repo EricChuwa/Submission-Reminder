@@ -43,9 +43,12 @@ Description of key files:
 
 ## Setup Instruction
 ### 1. Run the "create_environment.sh"
+
 Go into the "Submission_Reminder" directory and run the following command. 
 
-bash create_environment.sh
+```bash create_environment.sh```
+or 
+```./create_environment.sh```
 
 This will:
 
@@ -55,4 +58,13 @@ This will:
 
 - Make the main scripts executable.
 
-### 2. Configure Environment
+### 2. Copilot ShellScript
+
+In order to check the assignments and to check who hasn't submitted their assignments run the copilot program with the following command:
+
+```bash copilot_shell_script.sh```
+or
+```./copilot_shell_script.sh```
+
+This program allows for the automation of checking the different assignments without having to manually use the "startup.sh" and change the "config.env"
+
