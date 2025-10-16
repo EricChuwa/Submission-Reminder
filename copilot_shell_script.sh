@@ -5,7 +5,7 @@ usrHome=$(find . -name "submission_reminder_*" | awk -F"/" '{ print $2 }')
 
 echo "********************************************"
 # Assignment Menu
-echo -e """Assignments:
+echo -e """\nAssignments:
 1) Shell Navigation
 2) Git
 3) Shell Basics
@@ -28,4 +28,7 @@ echo "********************************************"
 
 sed -i "s|ASSIGNMENT=\".*\"|ASSIGNMENT=\"$ASSIGNMENT\"|" "$usrHome/config/config.env"
 
-./submission_*/startup.sh
+# Running startup
+cd submission_*
+./startup.sh
+cd ..
